@@ -1,0 +1,222 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 3rem;
+  padding: 30px;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.search-bar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.search-bar {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.search-bar input {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  width: 400px;
+  border-radius: 50px;
+  flex: 1;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+  border-color: #007bff;
+
+  outline: none;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.search-bar button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  margin-left: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+/* *******************************************Auto-search****************************************************************** */
+
+.auto-search {
+  box-sizing: border-box;
+  background-color: #8a8a8a;
+  box-shadow: 0px 2px 2px 0px rgb(164, 164, 232);
+  max-width: inherit;
+}
+
+.auto-search li {
+  padding: 0.5rem 0;
+  list-style: none;
+  color: white;
+}
+
+.auto-search li:hover {
+  background-color: #c82333;
+  color: white;
+}
+.active-option {
+  background-color: blue;
+}
+
+.book-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.book-card img {
+  width: 60px;
+  height: 90px;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.book-card h4 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.book-card p {
+  margin: 8px 0 0;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.wishList {
+  width: 40%;
+  height: fit-content;
+  background-color: white;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.wishList h1 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.wishList-item {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.wishList-item:last-child {
+  border-bottom: none;
+}
+
+.wishList-item span {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.wishList-item button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.wishList-item button:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .wishList {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #007bff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
